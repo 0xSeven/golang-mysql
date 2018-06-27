@@ -4,7 +4,8 @@ How to connect your golang app with this driver
 
 ![Go-MySQL-Driver logo](https://raw.github.com/wiki/go-sql-driver/mysql/gomysql_m.png "Golang Gopher holding the MySQL Dolphin")
 
-func SetupDatabase(waitGroup *sync.WaitGroup){
+
+	func SetupDatabase(waitGroup *sync.WaitGroup){
 	//Setting up geo database
 	var geoErr error
 	geoDb, geoErr = geoip2.Open("GeoLite2-City.mmdb")
@@ -92,4 +93,4 @@ func SetupDatabase(waitGroup *sync.WaitGroup){
 
 	go testConnection()
 	defer waitGroup.Done()
-}
+	}
